@@ -4,16 +4,24 @@
  */
 package asconversion;
 
+import java.io.*;
+
 /**
  *
  * @author jquinlan
  */
 public class ASConversion {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            File old = new File("Eval_Results.txt");
+            old.delete();
+            File out = new File("Eval_Results.txt");
+            out.createNewFile();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 }
