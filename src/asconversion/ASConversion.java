@@ -23,5 +23,20 @@ public class ASConversion {
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
         }
+        char yn = 'n';
+        String ynString;
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        while(Character.toUpperCase(yn) != 'Y')
+        {
+            System.out.println("WARNING!: This program will mark each text file "
+                    + "with '1'. Continue? (y/n): ");
+            ynString = scanner.nextLine();
+            yn = ynString.charAt(0);
+            if(Character.toUpperCase(yn) == 'N')
+            {
+                System.err.println("Exiting . . . ");
+            }
+            
+        }
     }
 }
